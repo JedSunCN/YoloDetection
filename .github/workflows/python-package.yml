@@ -30,7 +30,7 @@ jobs:
 
     - name: Build with Nuitka
       run: |
-        python -m nuitka --assume-yes-for-downloads --mingw64 --remove-output --standalone --enable-plugin=no-qt --include-data-files="default.yaml=ultralytics/cfg/default.yaml" --output-dir=dist Module_detect.py
+        python -m nuitka --assume-yes-for-downloads --mingw64 --remove-output --standalone --enable-plugin=no-qt --include-data-files="./default.yaml=./ultralytics/cfg/default.yaml" --output-dir=dist Module_detect.py
 
     - name: Archive build artifacts
       uses: actions/upload-artifact@v2
